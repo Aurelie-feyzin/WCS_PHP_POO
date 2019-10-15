@@ -1,6 +1,6 @@
 # Quête POO
 
-## Part 1 (https://github.com/Aurelie-feyzin/WCS_PHP_POO/releases/tag/part1)
+## [Part 1](https://github.com/Aurelie-feyzin/WCS_PHP_POO/releases/tag/part1)
 Après le vélo, quand on grandit, on passe à la voiture, et bien dans le challenge, c'est la même chose ! Après la classe vélo, tu dois créer une classe permettant de manipuler un objet voiture. Une voiture doit comporter les propriétés suivantes :
 
 ![uml-car](http://images.innoveduc.fr/php_parcours/OOP/uml-car.png "uml car")
@@ -15,7 +15,8 @@ Critères de validation
     Sur index.php, les vélos et voitures avancent et freinent sans erreur.
     Ton code est disponible sur GitHub.
 
-## Part 2
+## [Part 2](https://github.com/Aurelie-feyzin/WCS_PHP_POO/releases/tag/part2) 
+
 Créer ta première classe enfant
 
 Après les classes Car et Bicycle, tu dois créer une classe permettant de manipuler un objet camion.
@@ -39,3 +40,27 @@ Critères de validation
     Sur index.php, les camions avancent, freinent et contrôlent leur chargement sans erreur.
     Ton code est disponible sur GitHub.
 
+## Part 3
+
+On the road again
+
+    Créer une classe abstraite HighWay possédant les propriétés suivantes : 
+    - currentVehicles (array), 
+    - nbLane (int)
+    - et maxSpeed (int),
+    ainsi que les getters et setters correspondants, dont héritent les classes finales :
+    - MotorWay (4 voies, 130km/h), 
+    - PedestrianWay (1 voie, 10km/h)
+    - et ResidentialWay (2 voies, 50km/h). 
+    La classe HighWay possède une méthode abstraite addVehicule() prenant en paramètre un objet de type Vehicle. 
+    Chaque classe fille devra implémenter la méthode pour qu’elle ajoute le véhicule au tableau $currentVehicules, uniquement si ce dernier est autorisé sur ce type de voie. 
+    Ainsi, pour MotorWay, addVehicule($car) ajoutera bien une voiture au tableau, tandis que addVehicule($bike) ne le fera pas, car il n’est pas possible de rouler en vélo sur une autoroute. 
+    Les règles attendues sont les suivantes:
+    - motorway : tout type de voiture (et de camion)
+    - ResidentialWay : tout type de véhicule
+    - PedestrianWay : Bike et Skateboard uniquement
+
+Critères de validation
+
+    Les classes HighWay (abstraites) et MotorWay, PedestrianWay, ResidentialWay (finales) sont toutes les quatres créées, l’héritage et les propriétés/méthodes attendues sont présentes, ainsi que les valeurs par défaut.
+    La classe HighWay possède une seule méthode abstraite, addVehicle(), implémentée de manière différente dans chacune de ses classes filles, en fonction des types de véhicules autorisés.

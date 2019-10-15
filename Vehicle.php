@@ -2,7 +2,7 @@
 
 // Vehicle.php
 
-class Vehicle
+abstract class Vehicle
 {
     /**
      * @var string
@@ -114,5 +114,5 @@ class Vehicle
         return $this;
     }
 
-
+    // abstract public function changeWheel();
 }
