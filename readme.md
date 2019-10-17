@@ -40,7 +40,7 @@ Critères de validation
     Sur index.php, les camions avancent, freinent et contrôlent leur chargement sans erreur.
     Ton code est disponible sur GitHub.
 
-## Part 3
+## [Part 3](https://github.com/Aurelie-feyzin/WCS_PHP_POO/releases/tag/part3)
 
 On the road again
 
@@ -64,3 +64,20 @@ Critères de validation
 
     Les classes HighWay (abstraites) et MotorWay, PedestrianWay, ResidentialWay (finales) sont toutes les quatres créées, l’héritage et les propriétés/méthodes attendues sont présentes, ainsi que les valeurs par défaut.
     La classe HighWay possède une seule méthode abstraite, addVehicle(), implémentée de manière différente dans chacune de ses classes filles, en fonction des types de véhicules autorisés.
+
+#Part 4
+Et la lumière fut !
+
+Créer une interface LightableInterface possédant les méthodes switchOn(), switchOff(), 
+qu’implémenteront les véhicules possédant des éclairages comme Car et Bike, mais pas SkateBoard 
+(cette dernière est à créer si ce n’est déjà fait). 
+Dans la classe Car, switchOn() retourne true et switchOff() false. 
+Dans la classe Bike, où une dynamo est utilisée, switchOn() retourne true seulement si la currentSpeed() est >10km/h,
+tandis que switchOff() retourne toujours false.
+
+Critères de validation
+
+    L’interface LightableInterface est créée, 
+    possède les méthodes switchOn() et switchOff(). 
+    L’interface est implémentée correctement, au moins par les classes Car et Bike, mais non implémentée sur SkateBoard.
+
