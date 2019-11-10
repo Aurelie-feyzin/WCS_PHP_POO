@@ -5,7 +5,7 @@ Après le vélo, quand on grandit, on passe à la voiture, et bien dans le chall
 
 ![uml-car](http://images.innoveduc.fr/php_parcours/OOP/uml-car.png "uml car")
 
-Critères de validation
+**Critères de validation :**
 
     Le nom de la classe est en anglais et en UpperCamelCase.
     La classe contient toutes les propriétés et méthodes demandées.
@@ -30,7 +30,7 @@ La capacité de stockage doit être saisie au moment de l'Instanciation de l'obj
 
     N'oublie pas les getters et les setters !!
 
-Critères de validation
+**Critères de validation :**
 
     Le nom de la classe est en anglais et en UpperCamelCase.
     La classe contient toutes les propriétés et méthodes demandées.
@@ -60,12 +60,12 @@ On the road again
     - ResidentialWay : tout type de véhicule
     - PedestrianWay : Bike et Skateboard uniquement
 
-Critères de validation
+**Critères de validation :**
 
     Les classes HighWay (abstraites) et MotorWay, PedestrianWay, ResidentialWay (finales) sont toutes les quatres créées, l’héritage et les propriétés/méthodes attendues sont présentes, ainsi que les valeurs par défaut.
     La classe HighWay possède une seule méthode abstraite, addVehicle(), implémentée de manière différente dans chacune de ses classes filles, en fonction des types de véhicules autorisés.
 
-#Part 4
+## [Part 4](https://github.com/Aurelie-feyzin/WCS_PHP_POO/releases/tag/part4)
 Et la lumière fut !
 
 Créer une interface LightableInterface possédant les méthodes switchOn(), switchOff(), 
@@ -75,9 +75,23 @@ Dans la classe Car, switchOn() retourne true et switchOff() false.
 Dans la classe Bike, où une dynamo est utilisée, switchOn() retourne true seulement si la currentSpeed() est >10km/h,
 tandis que switchOff() retourne toujours false.
 
-Critères de validation
+**Critères de validation :**
 
     L’interface LightableInterface est créée, 
     possède les méthodes switchOn() et switchOff(). 
     L’interface est implémentée correctement, au moins par les classes Car et Bike, mais non implémentée sur SkateBoard.
 
+## Part 5
+Evite les traces de pneus
+
+- Crée dans la classe Car un attribut privé de type booléen, représentant l'état du frein à main, hasParkBrake.
+- Crée une méthode publique qui change l'état du frein à main setParkBrake().
+- Lève une exception dans Car au niveau de la méthode  start(), avec throw(), si le frein à main est actif.
+- Capture l'erreur avec try lors de l'appel à la start() sur une instance de Car.
+- Si une exception est attrapée dans le bloc catch, gère le cas en modifiant l'état du frein à main.
+- Envoie le message “Ma voiture roule comme un donut”, quel que soit le comportement avec finally.
+
+**Critères de validation :**
+
+    L'erreur doit être levée et gérée correctement 
+    
