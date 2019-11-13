@@ -81,7 +81,7 @@ tandis que switchOff() retourne toujours false.
     possède les méthodes switchOn() et switchOff(). 
     L’interface est implémentée correctement, au moins par les classes Car et Bike, mais non implémentée sur SkateBoard.
 
-## Part 5
+## [Part 5](https://github.com/Aurelie-feyzin/WCS_PHP_POO/releases/tag/part5)
 Evite les traces de pneus
 
 - Crée dans la classe Car un attribut privé de type booléen, représentant l'état du frein à main, hasParkBrake.
@@ -95,3 +95,13 @@ Evite les traces de pneus
 
     L'erreur doit être levée et gérée correctement 
     
+## Part 6
+Miles VS km
+
+Créé une classe Speedometer qui comprendra une méthode static qui convertit les KM en MILES et une autre qui convertit les MILES en KM.
+
+**Critères de validation :**
+
+    En dehors de la classe, en faisant echo Speedometer::convertKmToMiles(10); la méthode retournera 6,21
+    Aucun magic number n’est présent dans les méthodes (pense aux constantes !)
+

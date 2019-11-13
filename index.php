@@ -1,21 +1,20 @@
-<?php
+<?php declare(strict_types=1);
 
-require_once 'Bicycle.php';
-require_once 'Car.php';
-require_once 'Truck.php';
-require_once 'Skateboard.php';
-require_once 'MotorWay.php';
-require_once 'PedestrianWay.php';
-require_once 'ResidentialWay.php';
+require_once 'Speedometer.php';
 
-$car = new Car('green', 4, Motorized::ALLOWED_ENERGIES[1]);
-var_dump($car);
-try {
-    $car->start();
-} catch (Exception $e) {
-    echo $e->getMessage();
-    $car->setParkBrake(false);
-} finally {
-    echo 'Ma voiture roule comme un donut';
+function testSpeedometer($values)
+{
+    foreach ($values as $value){
+        try {
+            echo $value . 'km correspondent à ' . Speedometer::kmToMiles($value) . 'miles <br>';
+            echo $value . 'miles correspondent à ' . Speedometer::milesToKm($value). 'km <br>';
+        } catch (TypeError $e) {
+            echo "<span style='color:red;'>Exception capturé dans index </span>". $e->getMessage() .'<br>';
+        } finally {
+            echo '<br>';
+        }
+
+    }
 }
-var_dump($car);
+
+testSpeedometer([10, 0, -10, 'a', null, [1, 'b'], 50]);
